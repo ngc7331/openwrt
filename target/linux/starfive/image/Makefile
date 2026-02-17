@@ -65,6 +65,30 @@ define Device/visionfive2-v1.3b
 endef
 TARGET_DEVICES += visionfive2-v1.3b
 
+define Device/milkv-mars
+  DEVICE_VENDOR := Milk-V
+  DEVICE_MODEL := Mars
+  DEVICE_DTS := starfive/jh7110-milkv-mars
+  DEVICE_PACKAGES := kmod-eeprom-at24
+endef
+TARGET_DEVICES += milkv-mars
+
+define Device/milkv-mars-cm-emmc
+  DEVICE_VENDOR := Milk-V
+  DEVICE_MODEL := Mars CM
+  DEVICE_DTS := starfive/jh7110-milkv-marscm-emmc
+  DEVICE_PACKAGES := kmod-eeprom-at24 kmod-brcmfmac
+endef
+TARGET_DEVICES += milkv-mars-cm-emmc
+
+define Device/milkv-mars-cm-lite
+  DEVICE_VENDOR := Milk-V
+  DEVICE_MODEL := Mars CM Lite
+  DEVICE_DTS := starfive/jh7110-milkv-marscm-lite
+  DEVICE_PACKAGES := kmod-eeprom-at24 kmod-brcmfmac
+endef
+TARGET_DEVICES += milkv-mars-cm-lite
+
 define Device/beaglev-starlight
   $(call Device/JH7100)
   DEVICE_VENDOR := BeagleV
